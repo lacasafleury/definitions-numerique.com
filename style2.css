@@ -1,0 +1,1836 @@
+/* Couleurs du thème */
+:root {
+  --color-light-blue: #88C2F5;
+  --color-blue: #75A6D1;
+  --color-dark-blue: #5E86A8;
+  --color-darker-blue: #47657F;
+  --color-deep-blue: #324759;
+  --color-white: #FFFFFF;
+}
+
+hr {
+  border: 1px solid  var(--color-darker-blue);
+  width:90%;
+}
+
+ img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Conteneur du menu */
+.menu {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+ // background-color: var(--color-deep-blue);
+}
+
+/* Style des boutons */
+.menu-button {
+  background: linear-gradient(145deg, var(--color-light-blue), var(--color-blue)); /* Fond lumineux par défaut */
+  color: var(--color-white); /* Texte blanc par défaut */
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1; /* Pas d'espacement vertical inutile */
+  padding: 0.3rem 1.2rem; /* Réduction du padding vertical */
+  border: 2px solid var(--color-light-blue);
+  border-radius: 8px; /* Légèrement plus arrondi */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;    
+  white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+/* Effet au survol */
+.menu-button:hover {
+  background: var(--color-light-blue); /* Fond entièrement light blue */
+  color: var(--color-deep-blue); /* Texte deep blue */
+  text-shadow: none; /* Suppression du contour */
+  box-shadow: 0px 6px 20px rgba(136, 194, 245, 0.7); /* Lumière douce */
+}
+
+/* Bouton actif */
+.menu-button.active {
+  background: linear-gradient(145deg, var(--color-light-blue), var(--color-blue)); /* Style de base */
+  border-color: var(--color-white);
+  box-shadow: 0px 6px 20px var(--color-light-blue);
+  color: var(--color-white); /* Texte blanc */
+  cursor: default;
+}
+
+.tabledef {
+    width: 100%; /* Le tableau prend 100% de la largeur */
+    margin: auto; /* Centrage du tableau */
+    border-collapse: collapse; /* Fusionne les bordures */
+}
+
+.tabledef td {
+    vertical-align: top; /* Alignement en haut des cellules */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordures discrètes */
+}
+
+.tabledef tr {
+    background-color: #f9f9f9; /* Couleur de fond légère */
+}
+
+.tabledef tr:nth-child(even) {
+    background-color: #f1f1f1; /* Alternance des couleurs */
+}
+
+.plan{
+	text-align: left; 
+	padding: 5px; 
+	text-transform: uppercase; 
+	font-weight: bold; 
+	color: var(--color-dark-blue);
+}
+.plan:hover {
+  color: var(--color-black);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #119ff7 !important; /* Bleu clair */
+    padding: 10px 15px;
+    border-left: 6px solid #AED6F1; /* Correction ici */
+    background: rgba(173, 216, 230, 0.2);
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out, transform 0.2s;
+
+    /* Ajout du fond blanc derrière le texte */
+    background-color: white;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}        
+
+/* Style des rubriques */
+.rubrique {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background: var(--color-darker-blue);
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.rubrique:hover {
+  background: var(--color-dark-blue);
+  color: var(--color-light-blue);
+}
+
+.rubriqueDEF {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background: var(--color-darker-blue);
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.rubriqueDEF:hover {
+  background: var(--color-dark-blue);
+  color: var(--color-light-blue);
+}
+
+
+.styled-span {
+    background-color: var(--color-light-blue);
+    color: var(--color-darker-blue);
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.styled-span2 {
+    background-color: var(--color-darker-blue);
+    color: var(--color-light-blue);
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    background: white;
+    background-image: url('image.jpg');
+    background-repeat: repeat-y; /* Répétition uniquement en vertical */
+    background-size: 100% auto; /* 100% en largeur, hauteur automatique */
+    background-position: top center; /* Alignement au centre */
+}
+  
+  /* Conteneur principal */
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Si nécessaire pour un alignement vertical */
+    width: 100%; /* Assurez-vous que l'élément prend toute la largeur disponible */
+  }
+  
+  /* Rectangle principal */
+  .rectangle-top {
+    width: 90%;
+    background-color: var(--color-darker-blue);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    padding-top: 10px;
+    display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center; /* Centre les boutons horizontalement */
+  min-height: 70px; /* Hauteur minimale */
+  height: auto; /* Permet à la hauteur de s'adapter */
+  overflow: visible; /* S'assure que tout reste visible */
+  padding: 10px 0; /* Ajoute un peu d'espace autour */  
+  }
+
+
+  .rectangle-bottom {
+    width: 90%;
+    height: 70px;
+    background-color: var(--color-darker-blue);
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les boutons horizontalement */
+    height: auto; /* Permet à la hauteur de s'adapter */
+    overflow: visible; /* S'assure que tout reste visible */
+    }
+  
+  /* Logo */
+.logo {
+position: static; /* Supprime le positionnement absolu */
+    height: 80px;
+    width: auto;
+}
+  
+.logo-container {
+    position: relative; /* Permet aux logos de se placer normalement */
+}  
+  
+  
+
+  .tab {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .lettrescript {
+    width: 90%;
+    height: 100px;
+    background-color: var(--color-darker-blue);
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .barrederecherche {
+    width: 90%;
+    height: 70px;
+    background-color: var(--color-darker-blue);
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .home {
+    width: 90%;
+    height: auto;
+    background-color: #CCCCCC;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet aux colonnes de passer à la ligne en responsive */
+   }
+  
+
+  
+  .gauche {
+    text-align: left;                        
+    background-color: var(--color-darker-blue);
+    width: 230px;
+
+  }
+  
+/* ===============================
+   CONTENEUR DROITE – LARGEUR SITE
+=============================== */
+.droite {
+    flex: 1;
+    max-width: 900px;        /* ✅ largeur cohérente avec le site */
+    margin: 0 auto;          /* centre le bloc */
+    display: block;
+    box-sizing: border-box;
+}
+
+
+
+  
+  .btnCategories {
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(160deg, #76d5c5, #355872);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  .h1 {
+    margin: 20px 0;
+    font-size: 3em;
+    color: #0056b3;
+    text-shadow: 2px 2px 4px #aaa;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Carte de membre */
+  .team-card {
+    background: #fff;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+  
+  .team-info {
+    padding: 10px;
+    background: #0056b3;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-card:hover .team-info {
+    transform: translateY(0);
+  }
+  
+  .team-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .team-info p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+  }
+  
+.reseau-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    justify-content: center; /* Centre les éléments */
+    gap: 10px; /* Espace entre les éléments */
+    margin-top: 15px;
+    position: static; /* Supprime le positionnement absolu */
+}
+
+.reseau-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.imageRéseaux {
+    height: 20px;
+    width: 20px;
+}
+
+.bouton-container {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    gap: 20px;
+}
+  
+  /* Style des boutons principaux */
+  .bouton {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(160deg, #88C2F5, #324759);
+	z-index: 2;
+  }
+  
+  .bouton-primary:hover {
+    background: linear-gradient(160deg, #88C2F5, #324759);
+  }
+  
+  .bouton:active, .bouton.selected {
+    background-color: #5E86A8;
+    transform: translateY(2px);
+  }
+ 
+     
+
+        .definition-box {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .definition-box a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .definition-box a:hover {
+            color: #0056b3;
+        }
+
+        
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .page-link {
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .page-link:hover {
+            background-color: #0056b3;
+        }
+
+        .proposer-def-btn a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .proposer-def-btn a:hover {
+            background-color: #0056b3;
+        }
+ 
+ /* Le conteneur des lettres */
+.lettrescript {
+  width: 90%; /* Laisser la largeur occuper tout l'espace disponible */
+  height: auto; /* Hauteur ajustable */
+  background-color: var(--color-darker-blue);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet de passer à la ligne suivante lorsque nécessaire */
+  gap: 0px; /* Espacement entre les lettres */
+  padding: 10px 0; /* Ajouter un peu d'espace autour */
+}
+
+/* Liste des lettres */
+.lettre-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de s'adapter et de passer à la ligne */
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centrer les éléments */
+}
+
+/* Style pour chaque lettre */
+.lettre {
+  text-decoration: none;
+  font-size: 1vw; /* Utiliser un pourcentage de la largeur de la fenêtre */
+  padding: 5px;
+  background-color: var(--color-blue);
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 15px; /* Largeur ajustée */
+  margin: 2px; /* Espacement entre les lettres */
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Effet au survol */
+.lettre:hover {
+  background-color: var(--color-dark-blue);
+  color: white;
+}
+  
+  .proposer {
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(160deg, #88C2F5, #324759);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+ .compteur-class {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;          /* 🔥 empêche toute variation */
+    min-height: 42px;
+
+    border-radius: 50%;
+    background-color: var(--color-light-blue);
+    color: #000;
+
+    display: flex;            /* 🔥 centrage parfait */
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;           /* 🔥 clé du problème */
+    box-sizing: border-box;
+
+    flex-shrink: 0;           /* 🔥 empêche l’écrasement en flex */
+}
+  
+  .btndefintitre {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1E90FF;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .textprop {
+    display: inline-block;
+    left: 50px;
+    color: #75A6D1;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style général des boutons */
+  .btn-modifier {
+    background: linear-gradient(45deg, #336699, #6699cc);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* L'effet de néon qui traverse le bouton */
+  .btn-modifier::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.4s ease;
+    animation: shine 3s infinite;
+  }
+  
+  .btn-modifier:hover {
+    box-shadow: 0 0 12px rgba(51, 102, 153, 1), 0 0 25px rgba(51, 102, 153, 0.8);
+    transform: scale(1.05);
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  
+  /* Pagination */
+  .pagination {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination .page-link {
+    font-weight: bold;
+  }
+  
+.pititext{
+	font-weight: bold; /* Gras pour le texte */
+	color: #5E86A8; /* Text en bleu */
+}
+ .video-container {
+    position: relative;
+    width: 100%; /* La vidéo prend toute la largeur du parent */
+    max-width: 600px; /* Optionnel : Limite la largeur maximale */
+    margin: 0 auto; /* Centre la vidéo */
+}
+
+.video-container iframe,
+.video-container video {
+    width: 100%;
+    height: auto; /* Ajuste automatiquement la hauteur */
+    aspect-ratio: 16/9; /* Maintient un bon ratio */
+}
+
+.titre {
+	position: static;  /* pas de positionnement spécial */
+	border: none;  /* pas de bordure */
+	border-radius: 20px; /* bords arrondis */
+    color: #75A6D1;
+    font-weight: bold; /* texte en gras */
+    text-transform: uppercase; /* texte en majuscule */
+	text-align: center; /* texte au centre horizontalement*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.mepdef{
+	display: inline-block;
+	position: relative; /* Permet à left de fonctionner */
+	border: none;  /* pas de bordure */
+	border-radius: 20px; /* bords arrondis */
+	left: 10px;
+	color: #75A6D1;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 2px 30px;
+	text-align: center;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+}
+
+
+.categorie {
+	position:static;
+	border-radius: 20px;
+	color: #75A6D1;
+	font-weight: bold; /* texte en gras */
+    text-transform: uppercase; /* texte en majuscule */
+	text-align: center; /* texte au centre horizontalement*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+} 
+
+.video{
+	position:static;
+	border-radius: 20px;
+	color: #75A6D1;
+	font-weight: bold; /* texte en gras */
+    text-transform: uppercase; /* texte en majuscule */
+	text-align: center; /* texte au centre horizontalement*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.quiz{
+	position:static;
+	border-radius: 20px;
+	color: #75A6D1;
+	font-weight: bold; /* texte en gras */
+    text-transform: uppercase; /* texte en majuscule */
+	text-align: center; /* texte au centre horizontalement*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.liens{
+	position:static;
+	border-radius: 20px;
+	color: #75A6D1;
+	font-weight: bold; /* texte en gras */
+    text-transform: uppercase; /* texte en majuscule */
+	text-align: center; /* texte au centre horizontalement*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+.fx {
+  display: flex;
+}
+
+.fx-gap {
+  gap: 500px;
+}
+input[id="search-field"],
+button[id ="buttonSh"] {
+  position: relative;
+  top: -50%;
+  height: 70px;
+  color: #a1e9fe; /* La couleur claire est conservée pour les boutons */
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+form[name="s"] {
+  
+  position: absolute;
+  top: 125%;
+  left: 0;
+  right: 0;
+  width: 550px;
+  height: 5%;
+  padding: 25px;
+  
+  margin: -83px auto 0 auto;
+  background-color: #375574; /* Bleu foncé pour correspondre au site */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(55, 85, 116, 0.6), 0 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(0.6);
+}
+
+input[id="search-field"] {
+  position: absolute;
+
+  width: 80%;
+  top: -25%;
+
+  height: 96px;
+
+  font-size: 40px;
+  line-height: 1;
+  color: #ffffff; /* Texte en blanc */
+  background-color: transparent;
+}
+
+input[id="search-field"]::placeholder {
+  color: #a9c6de; /* Bleu clair pour un bon contraste */
+}
+
+#buttonSh {
+  position: relative;
+  display: block;
+  width: 84px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#search-icon-circle {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  margin-top: 0;
+  border-width: 10px;
+  border: 8px solid #a9c6de; /* Adapter au bleu clair du site */
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
+}
+
+#buttonSh span {
+  position: absolute;
+  top: 68px;
+  left: 43px;
+  display: block;
+  width: 45px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
+}
+
+#buttonSh span:before,
+#buttonSh span:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: 35px;
+  width: 25px;
+  height: 10px;
+  background-color: #a9c6de;
+  border-radius: 10px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+#search-icon:hover #search-icon-circle {
+  top: -1px;
+  width: 67px;
+  height: 15px;
+  border-width: 0;
+  background-color: #a9c6de;
+  border-radius: 20px;
+}
+
+#search-icon:hover span {
+  top: 50%;
+  left: 56px;
+  width: 25px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#search-icon:hover #buttonSh span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
+}
+
+#search-icon:hover #buttonSh span:after {
+  bottom: -11px;
+  transform: rotateZ(-52deg);
+}
+
+#search-icon:hover #buttonSh span:before,
+#search-icon:hover #buttonSh span:after {
+  right: -6px;
+  width: 40px;
+  background-color: #a9c6de;
+}
+
+.search-container {
+  width: 50%; /* Réduit la largeur à la moitié de l'écran */
+  max-width: 400px; /* Limite la largeur max */
+  margin: 0 auto; /* Centre l'élément */
+}
+
+.search-container input {
+  width: 100%; /* Remplit son conteneur */
+  padding: 8px;
+  font-size: 1rem;
+}
+
+ /* MEDIA QUERIES POUR LA VERSION MOBILE ET TABLETTE */
+  
+  @media (max-width: 768px) {
+    .rectangle-top, .lettrescript, .barrederecherche, .home, .rectangle-bottom {
+      width: 90%; /* Largeur ajustée pour petits écrans */
+    }
+    
+     .search-container {
+    width: 80%; /* Plus large sur mobile */
+  }
+  
+      .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-button {
+    width: 100%;
+    text-align: center;
+  }
+    
+     .home {
+        flex-direction: column; /* Met en colonne sur les petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .gauche,
+    .droite {
+        width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le texte */
+    }
+    
+    .team-card {
+      width: 100%; /* Carte de membre plus large pour s'adapter aux petits écrans */
+    }
+    
+    .container, .controls {
+      flex-direction: column; /* Les éléments se mettent en colonne */
+      align-items: center; /* Centrer les éléments */
+    }
+    .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 0 auto; /* Centre le logo */
+    height: 60px; /* Ajuste la taille si nécessaire */
+  } 
+  .reseau-container {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 10px;
+  }
+  
+ h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Taille de texte fluide */
+}
+      .lettre {
+    font-size: 4vw; /* Taille de police plus petite pour les écrans moyens */
+  }   .menu {
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
+    justify-content: center;
+    max-width: 70%; /* Bloque la largeur */
+    margin: 0 auto; /* Centre le menu */
+    height: auto; /* Permet à la hauteur de s'adapter */
+    overflow: visible; /* Assure que tout est visible */
+  }
+
+  .menu-button {
+    flex: 1 1 auto; /* Permet aux boutons de s’adapter */
+    min-width: 100px; /* Évite que les boutons soient trop petits */
+    text-align: center;
+  }
+  
+    .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 0 auto; /* Centre le logo */
+    height: 60px; /* Ajuste la taille si nécessaire */
+  }
+  }
+ 
+@media (max-width: 600px) {
+  .team-card {
+    width: 90%; /* Au lieu de 250px */
+  }
+  .btnCategories {
+    width: 100%;
+    font-size: 1rem;
+  }
+    .reseau-container {
+        flex-direction: column;
+        align-items: center; /* Centre les éléments */
+    }
+}
+
+  @media (max-width: 480px) {
+    .h1 {
+      font-size: 1.5em; /* Titre plus petit sur les écrans très petits */
+    }
+    
+    .search-container {
+    width: 90%;
+  }
+
+  .search-container input {
+    font-size: 0.9rem; /* Réduit la taille du texte */
+    padding: 6px;
+  }
+    
+    .team-card {
+      width: 100%;
+      height: 300px; /* Ajuster la hauteur des cartes sur mobile */
+    }
+    
+    .btn-modifier {
+      padding: 10px 20px; /* Réduire les tailles de padding pour mobile */
+    }
+  
+    .pagination a {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .team-container {
+      gap: 10px; /* Réduire l'écart entre les cartes */
+    }
+    .lettre {
+    font-size: 6vw; /* Taille de police encore plus petite pour les petits écrans */
+  }
+    .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 0 auto; /* Centre le logo */
+    height: 60px; /* Ajuste la taille si nécessaire */
+  }
+  .reseau-container {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 10px;
+  }
+  }
+
+
+
+/* ===============================
+   VIDEOS – TAILLE MAÎTRISÉE
+=============================== */
+.video-container {
+    display: flex;
+    justify-content: center;   /* centre le groupe */
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;          /* 🔥 les 2 vidéos ensemble */
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 340px;          /* 🔥 UNE vidéo = moitié du container */
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+    }
+}
+        /* ====== PAGE DÉFINITION (ETAPE 1) ====== */
+
+.definition-page {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.definition-meta {
+  margin: 10px 0 20px;
+}
+
+.definition-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+  align-items: start;
+}
+
+.definition-main {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.definition-text {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.definition-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.definition-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.definition-side-content {
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .definition-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== FIX PAGE DEFINITION : neutralise controls ===== */
+.definition-page {
+  width: 100%;
+}
+
+/* on enlève le centrage forcé */
+.definition-page .controls {
+  display: block !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+}
+/* ===== FORCE GRID DEFINITION ===== */
+.definition-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 260px !important;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .definition-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ===== désactivation anciens layouts ===== */
+.definition-page table,
+.definition-page .tabledef {
+  display: none;
+}
+               /* ===============================
+   VIDEO DÉFINITION
+=============================== */
+
+.definition-video {
+    margin: 40px auto 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* ===============================
+   CATÉGORIES
+=============================== */
+
+.definition-categories {
+    margin: 40px auto 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.category-badge {
+    background: var(--color-light-blue);
+    color: var(--color-deep-blue);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.category-badge:hover {
+    background: var(--color-blue);
+    transform: scale
+             }
+             
+             
+             .definition-quiz {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.quiz-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(160deg, #88C2F5, #324759);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.quiz-button:hover {
+    transform: scale(1.05);
+}
+
+
+   /* ===============================
+   FIX QUIZ : FORCER LE RETOUR À LA LIGNE
+=============================== */
+
+.definition-quiz {
+    margin: 30px auto;
+    text-align: center;
+    display: block;
+}
+
+.definition-quiz h3 {
+    display: block !important;   /* 🔥 casse le inline-block global */
+    margin-bottom: 15px;
+      text-align: center;
+}
+
+.definition-quiz .quiz-button {
+    display: inline-block;
+}
+                  /* ===============================
+   TITRE DEFINITIONS LIÉES
+=============================== */
+
+.definition-related h3 {
+    display: block !important;   /* 🔥 casse le inline-block global */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===============================
+   VUES – DEFINITIONS LIÉES
+=============================== */
+
+.related-views {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #5E86A8;
+}
+
+/* ===============================
+   DEFINITIONS LIÉES – LIGNE UNIQUE
+=============================== */
+
+.related-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-deep-blue);
+}
+
+.related-title {
+    font-weight: bold;
+}
+
+.related-meta {
+    font-size: 0.85rem;
+    color: #5E86A8;
+    white-space: nowrap;
+}
+
+/* Badge très consulté */
+.badge-populaire {
+    margin-left: 6px;
+    background: #ff9800;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+    /* ===============================
+   TITRES SECTIONS (h3) EN PLEINE LARGEUR
+   (vidéo / catégories / définitions liées / quiz)
+=============================== */
+
+/* On garde ton style h3 global, mais on force la largeur sur ces sections */
+.definition-video h3,
+.definition-categories h3,
+.definition-related h3,
+.definition-quiz h3 {
+  display: block !important;     /* casse le inline-block global */
+  width: 100% !important;        /* prend toute la largeur */
+  box-sizing: border-box;
+  text-align: center;            /* comme ton quiz */
+  margin: 0 0 15px 0;            /* espace propre dessous */
+}
+/* ===============================
+   ALIGNEMENT LARGEUR DES SECTIONS
+=============================== */
+
+.definition-video,
+.definition-categories,
+.definition-related,
+.definition-quiz {
+    width: 100%;
+    max-width: 800px;      /* même largeur que la vidéo */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+/* ===============================
+   CARTES DE SECTIONS (harmonisation)
+=============================== */
+
+.definition-video,
+.definition-categories,
+.definition-related,
+.definition-quiz {
+    width: 100%;
+    max-width: 900px;          /* même largeur que le contenu */
+    margin: 40px auto 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+/* ===============================
+   TITRES DE SECTIONS
+=============================== */
+
+.definition-video h3,
+.definition-categories h3,
+.definition-related h3,
+.definition-quiz h3 {
+    background: none !important;
+    box-shadow: none !important;
+    border-left: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+           /* ===============================
+   DEFINITIONS LIÉES – STYLE LIEN ÉLÉGANT
+=============================== */
+
+.related-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.related-item:hover {
+    background: #f7fbff; /* bleu très léger */
+    box-shadow: 0 4px 10px rgba(70, 101, 127, 0.15);
+}
+
+.related-title {
+    font-weight: 600;
+    color: var(--color-darker-blue);
+    text-decoration: none;
+    position: relative;
+    padding-left: 18px;
+}
+
+/* petite icône discrète */
+.related-title::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    color: var(--color-light-blue);
+    transition: transform 0.2s ease;
+}
+
+.related-item:hover .related-title::before {
+    transform: translateX(4px);
+}
+
+.related-item:hover .related-title {
+    color: var(--color-deep-blue);
+    text-decoration: underline;
+}
+.related-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.related-item:hover {
+    background: #f7fbff;
+    box-shadow: 0 4px 10px rgba(70, 101, 127, 0.15);
+}
+
+.related-line {
+    text-decoration: none;
+}
+
+.related-title {
+    font-weight: 600;
+    color: var(--color-darker-blue);
+    position: relative;
+    padding-left: 18px;
+}
+
+.related-title::before {
+    content: "➜";
+    position: absolute;
+    left: 0;
+    color: var(--color-light-blue);
+    transition: transform 0.2s ease;
+}
+
+.related-item:hover .related-title::before {
+    transform: translateX(4px);
+}
+
+.related-item:hover .related-title {
+    color: var(--color-deep-blue);
+    text-decoration: underline;
+}
+
+/* Vues à droite */
+.related-meta {
+    font-size: 0.85rem;
+    color: #5E86A8;
+    white-space: nowrap;
+}
+
+/* Badge populaire */
+.badge-populaire {
+    margin-left: 6px;
+    background: #ff9800;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+/* ===============================
+   DEFINITIONS AVEC VIDÉO
+=============================== */
+
+.video-def-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 16px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-def-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Lien titre */
+.video-def-line {
+    text-decoration: none;
+    color: var(--color-deep-blue);
+    font-weight: bold;
+    flex: 1;
+}
+
+.video-def-title {
+    display: inline-block;
+}
+
+/* Icône vidéo */
+.video-def-icon img {
+    width: 42px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.video-def-icon:hover img {
+    transform: scale(1.1);
+}
+   /* 3 cartes par ligne sur desktop */
+
+@media (max-width: 900px){
+  .definition-container{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .definition-container{ grid-template-columns: 1fr; }
+}
+
+/* pagination active (optionnel) */
+.page-link.active{
+  background: var(--color-darker-blue);
+  color: white;
+}
+  /* ===============================
+   STYLE LIENS TYPE "POPULAIRES"
+=============================== */
+
+.video-def-card {
+    padding: 14px 16px;
+}
+
+/* Ligne titre + vues */
+.pop-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Lien titre */
+.pop-link {
+    color: #1e6fd9;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.pop-link:hover {
+    text-decoration: underline;
+}
+
+/* Vues à droite */
+.pop-views {
+    font-size: 0.85rem;
+    color: #47657F;
+    white-space: nowrap;
+}
+
+/* Ligne vidéos */
+.pop-videos {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+/* Icône YouTube */
+.yt-link img {
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.yt-link:hover img {
+    transform: scale(1.1);
+}
+   .video-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-blue);
+    text-decoration: none;
+
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: rgba(136, 194, 245, 0.15);
+
+    transition: all 0.2s ease;
+}
+
+   /* =========================================================
+   FIX DEFINITIONS / VIDEOS / QUIZ – SANS CASSE
+========================================================= */
+
+/* On force un seul comportement pour les liens texte */
+.video-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-blue);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: rgba(136, 194, 245, 0.15);
+    transition: all 0.2s ease;
+}
+
+.video-text-link:hover {
+    background: rgba(136, 194, 245, 0.35);
+    color: var(--color-deep-blue);
+    transform: translateX(3px);
+}
+
+
+@media (max-width: 900px) {
+    .definition-container.video-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .definition-container.video-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Carte style populaire */
+.video-def-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-def-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Ligne titre + vues */
+.pop-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.pop-link {
+    color: #1e6fd9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pop-link:hover {
+    text-decoration: underline;
+}
+
+.pop-views {
+    font-size: 0.85rem;
+    color: #47657F;
+    white-space: nowrap;
+}  /* Fix: la grid doit avoir une largeur, sinon align-items:center peut la "rétrécir" */
+.droite .definition-container{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* ===============================
+   DEFINITIONS – FIX FINAL
+=============================== */
+
+/* Empêche le flex parent de casser la grid */
+.droite .controls {
+  align-items: stretch !important;
+}
+
+/* Container des définitions */
+.droite .definition-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Carte définition */
+.definition-box {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Lien */
+.definition-box a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1e6fd9;
+}
+
+.definition-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   FIX BOUTON "PROPOSER UNE DÉFINITION"
+=============================== */
+
+/* Autorise la hauteur automatique */
+.homediv,
+.home,
+.droite,
+.controls {
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+}
+
+/* Espace garanti avant le footer */
+.proposer-def-btn {
+    margin: 40px 0 60px;
+    text-align: center;
+}
+
+/* Bouton bien visible */
+.proposer-def-btn a {
+    display: inline-block;
+}
+
+.footerdiv {
+    margin-top: 40px;
+}
+
+/* ===============================
+   FIX ESPACE BLANC AVANT FOOTER
+=============================== */
+
+/* Le conteneur principal ne doit PAS forcer de hauteur */
+.home {
+    min-height: unset !important;
+    height: auto !important;
+    padding-bottom: 20px;
+}
+
+/* Sécurité : le contenu droit ne pousse pas inutilement */
+.droite {
+    padding-bottom: 0;
+}
+
+/* Le footer colle naturellement après */
+.footerdiv {
+    margin-top: 0;
+}
+
+
+/* Recherche à droite */
+.search-alpha-wrapper .barrediv {
+    flex: 0 0 320px;
+}
+
+/* Mobile : on repasse en colonne */
+@media (max-width: 900px) {
+    .search-alpha-wrapper {
+        flex-direction: column;
+    }
+
+    .search-alpha-wrapper .barrediv {
+        width: 100%;
+    }
+}
+ /* ===============================
+   FIX BARRE DE RECHERCHE DANS FLEX
+=============================== */
+
+/* Le conteneur existe vraiment */
+/* ===============================
+   BARRE DE RECHERCHE COMPACTE
+=============================== */
+
+.barrediv {
+    flex: 0 0 320px; /* largeur maîtrisée */
+    display: flex;
+    justify-content: center;
+}
+
+form[name="s"] {
+    position: relative !important;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 15px;
+
+    margin: 0;
+    transform: none; /* 🔥 plus de scale */
+}
+
+
+/* Champ visible correctement */
+input[id="search-field"] {
+    position: relative !important;
+    top: 0 !important;
+}
+ /* ===============================
+   BANDEAU LETTRES + RECHERCHE (FOND BLEU)
+=============================== */
+
+/* ===============================
+   BANDEAU LETTRES + RECHERCHE – FIX FINAL
+=============================== */
+
+.search-alpha-wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--color-darker-blue);
+
+    border-radius: 0 !important; /* 🔥 AUCUN ARRONDI */
+    padding: 10px 15px;
+    box-sizing: border-box;
+}

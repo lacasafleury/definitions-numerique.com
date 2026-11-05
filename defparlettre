@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d76759a8b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <?php
+            include "env.php";
+
+			$conn = new mysqli($_ENV['DB_SERVERNAME'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            if (isset($_GET['id'])) {
+                $lettre = $_GET['id'];
+
+                $sql = "SELECT definition, deftitre FROM definition WHERE deflettre LIKE ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $lettre); 
+                $stmt->execute();
+
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    echo "<h1>Liste des définitions pour la lettre '$lettre'</h1>";
+                    echo "<ul>";
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<li>" . ($row['deftitre']), ($row['definition']) . "</li>";
+                    }
+
+                    echo "</ul>";
+                } else {
+                    echo "Aucune définition trouvée pour la lettre '$lettre'.";
+                }
+
+                $stmt->close();
+            } else {
+                echo "Aucune lettre spécifiée.";
+            }
+
+            $conn->close();
+        ?>
+    </div>
+</body>
+
+</html>
