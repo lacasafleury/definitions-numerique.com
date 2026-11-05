@@ -1,0 +1,15 @@
+# Configuration et secrets
+**/env.php
+**/envprod.php
+**/envdevelopper.php
+.env
+.env.*
+!.env.example
+# Sauvegardes et exports
+*.sql
+*.zip
+*.bak
+*.log
+# Dépendances et fichiers locaux
+.DS_Store
+Thumbs.db
